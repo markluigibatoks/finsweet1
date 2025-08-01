@@ -7,7 +7,7 @@
             <div class="w-full text-center lg:text-left text-white">
                 <span>Sub heading text-center</span>
                 <h2 class="text-4xl">Lorem Ipsum text</h2>
-                <a href="#" class="button-primary block max-w-max mx-auto lg:mx-0">Click here</a>
+                <a href="#" class="button-nav-link block max-w-max mx-auto lg:mx-0">Click here</a>
             </div>
         </div>
     </div>

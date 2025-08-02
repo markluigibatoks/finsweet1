@@ -40,6 +40,11 @@
     --text-h1--line-height: 68px;
     --text-h1--letter-spacing: -1.92px;
 
+    --text-nav-link: 18px;
+    --text-nav-link--font-weight: 500;
+    --text-nav-link--line-height: auto;
+    --text-nav-link--letter-spacing: 0;
+
     --text-label-1: 18px;
     --text-label-1--font-weight: 500;
     --text-label-1--line-height: 32px;
@@ -54,17 +59,18 @@
     --color-primary: #0D1317;
     --color-blue: #232ED1;
     --color-red: #F24C27;
+    --color-grey: #5B5B5B;
 }
 
 body {
     font-family: "Poppins", sans-serif;
-    @apply bg-white text-paragraph;
+    @apply bg-white text-paragraph text-grey;
 }
 
 @layer components {
 
     .current-menu-item {
-        text-decoration: underline;
+        color: var(--color-blue) !important;
     }
 
     .main-box {
@@ -89,6 +95,31 @@ body {
 
     .text-gradient {
         @apply bg-gradient-to-r from-[#A54E2B] to-[#DC9853] bg-clip-text text-transparent;
+    }
+
+    /* Equivalent of: from-[#9499DD1A] to-[#0010FF1A] (10% opacity) */
+    .bg-gradient-light-blue-10 {
+        @apply bg-gradient-to-b from-[#F5F5FC] to-[#E5E6FF];
+    }
+
+    /* Equivalent of: from-[#9499DD33] to-[#0010FF33] (20% opacity) */
+    .bg-gradient-light-blue-20 {
+        @apply bg-gradient-to-b from-[#EBECF9] to-[#CCCCFF];
+    }
+
+    /* Equivalent of: from-[#B6BAFF33] to-[#232ED133] (20% opacity) */
+    .bg-gradient-blue-20 {
+        @apply bg-gradient-to-b from-[#E6E7FF] to-[#C5C8F2];
+    }
+
+    /* Equivalent of: from-[#FFCCC04D] to-[#F24C274D] (30% opacity) */
+    .bg-gradient-light-red-30 {
+        @apply bg-gradient-to-b from-[#FFDCD4] to-[#F8A393];
+    }
+
+    /* Equivalent of: from-[#FFD9D033] to-[#F24C2733] (20% opacity) */
+    .bg-gradient-red-20 {
+        @apply bg-gradient-to-b from-[#FFECE7] to-[#F8B3A6];
     }
 
     .button-primary {
@@ -152,7 +183,7 @@ body {
         padding: 8px 16px;
 
         text-align: center;
-        font-size: 18px;
+        font-size: 16px;
         line-height: auto;
         color: var(--color-primary);
         text-wrap: nowrap;
@@ -171,6 +202,8 @@ body {
             & {
                 border-radius: 5px;
                 padding: 18px 32px;
+                
+                font-size: 18px;
             }
         }
     }

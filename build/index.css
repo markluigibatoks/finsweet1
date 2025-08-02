@@ -46,6 +46,10 @@
     --text-h2--font-weight: 600;
     --text-h2--line-height: 56px;
     --text-h2--letter-spacing: -1.44px;
+    --text-nav-link: 18px;
+    --text-nav-link--font-weight: 500;
+    --text-nav-link--line-height: auto;
+    --text-nav-link--letter-spacing: 0;
     --text-label-2: 16px;
     --text-label-2--font-weight: 370;
     --text-label-3: 18px;
@@ -55,6 +59,7 @@
     --color-primary: #0D1317;
     --color-blue: #232ED1;
     --color-red: #F24C27;
+    --color-grey: #5B5B5B;
   }
 }
 @layer base {
@@ -722,6 +727,9 @@
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
+  .ml-5 {
+    margin-left: calc(var(--spacing) * 5);
+  }
   .ml-auto {
     margin-left: auto;
   }
@@ -871,6 +879,12 @@
   .bg-black {
     background-color: var(--color-black);
   }
+  .bg-grey {
+    background-color: var(--color-grey);
+  }
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
   .bg-white {
     background-color: var(--color-white);
   }
@@ -910,14 +924,20 @@
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
   }
+  .pt-6 {
+    padding-top: calc(var(--spacing) * 6);
+  }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
   }
   .pt-12 {
     padding-top: calc(var(--spacing) * 12);
   }
-  .pt-20 {
-    padding-top: calc(var(--spacing) * 20);
+  .pt-30 {
+    padding-top: calc(var(--spacing) * 30);
+  }
+  .pr-5 {
+    padding-right: calc(var(--spacing) * 5);
   }
   .pr-6 {
     padding-right: calc(var(--spacing) * 6);
@@ -939,6 +959,12 @@
     line-height: var(--tw-leading, var(--text-h5--line-height));
     letter-spacing: var(--tw-tracking, var(--text-h5--letter-spacing));
     font-weight: var(--tw-font-weight, var(--text-h5--font-weight));
+  }
+  .text-nav-link {
+    font-size: var(--text-nav-link);
+    line-height: var(--tw-leading, var(--text-nav-link--line-height));
+    letter-spacing: var(--tw-tracking, var(--text-nav-link--letter-spacing));
+    font-weight: var(--tw-font-weight, var(--text-nav-link--font-weight));
   }
   .text-paragraph {
     font-size: var(--text-paragraph);
@@ -964,25 +990,17 @@
   .text-label-3 {
     font-size: var(--text-label-3);
   }
+  .leading-15 {
+    --tw-leading: calc(var(--spacing) * 15);
+    line-height: calc(var(--spacing) * 15);
+  }
   .leading-16 {
     --tw-leading: calc(var(--spacing) * 16);
     line-height: calc(var(--spacing) * 16);
   }
-  .leading-20 {
-    --tw-leading: calc(var(--spacing) * 20);
-    line-height: calc(var(--spacing) * 20);
-  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
-  }
-  .font-light {
-    --tw-font-weight: var(--font-weight-light);
-    font-weight: var(--font-weight-light);
-  }
-  .tracking-normal {
-    --tw-tracking: var(--tracking-normal);
-    letter-spacing: var(--tracking-normal);
   }
   .tracking-tighter {
     --tw-tracking: var(--tracking-tighter);
@@ -996,6 +1014,9 @@
   }
   .text-black {
     color: var(--color-black);
+  }
+  .text-grey {
+    color: var(--color-grey);
   }
   .text-primary {
     color: var(--color-primary);
@@ -1020,9 +1041,6 @@
   }
   .opacity-78 {
     opacity: 78%;
-  }
-  .opacity-90 {
-    opacity: 90%;
   }
   .opacity-100 {
     opacity: 100%;
@@ -1098,6 +1116,13 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-red-600) !important;
+      }
+    }
+  }
+  .hover\:text-blue {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-blue);
       }
     }
   }
@@ -1271,6 +1296,16 @@
       align-items: center;
     }
   }
+  .lg\:gap-8 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 8);
+    }
+  }
+  .lg\:gap-10 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 10);
+    }
+  }
   .lg\:rounded-tl-xl {
     @media (width >= 64rem) {
       border-top-left-radius: var(--radius-xl);
@@ -1316,6 +1351,11 @@
       padding-block: calc(var(--spacing) * 32);
     }
   }
+  .lg\:pt-6 {
+    @media (width >= 64rem) {
+      padding-top: calc(var(--spacing) * 6);
+    }
+  }
   .lg\:pt-54 {
     @media (width >= 64rem) {
       padding-top: calc(var(--spacing) * 54);
@@ -1349,6 +1389,16 @@
       margin-left: calc(var(--spacing) * 29);
     }
   }
+  .xl\:gap-12 {
+    @media (width >= 80rem) {
+      gap: calc(var(--spacing) * 12);
+    }
+  }
+  .xl\:gap-16 {
+    @media (width >= 80rem) {
+      gap: calc(var(--spacing) * 16);
+    }
+  }
   .xl\:pr-16 {
     @media (width >= 80rem) {
       padding-right: calc(var(--spacing) * 16);
@@ -1362,10 +1412,11 @@ body {
   line-height: var(--tw-leading, var(--text-paragraph--line-height));
   letter-spacing: var(--tw-tracking, var(--text-paragraph--letter-spacing));
   font-weight: var(--tw-font-weight, var(--text-paragraph--font-weight));
+  color: var(--color-grey);
 }
 @layer components {
   .current-menu-item {
-    text-decoration: underline;
+    color: var(--color-blue) !important;
   }
   .main-box {
     position: relative;
@@ -1393,6 +1444,46 @@ body {
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
     background-clip: text;
     color: transparent;
+  }
+  .bg-gradient-light-blue-10 {
+    --tw-gradient-position: to bottom in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+    --tw-gradient-from: #F5F5FC;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+    --tw-gradient-to: #E5E6FF;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .bg-gradient-light-blue-20 {
+    --tw-gradient-position: to bottom in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+    --tw-gradient-from: #EBECF9;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+    --tw-gradient-to: #CCCCFF;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .bg-gradient-blue-20 {
+    --tw-gradient-position: to bottom in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+    --tw-gradient-from: #E6E7FF;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+    --tw-gradient-to: #C5C8F2;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .bg-gradient-light-red-30 {
+    --tw-gradient-position: to bottom in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+    --tw-gradient-from: #FFDCD4;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+    --tw-gradient-to: #F8A393;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .bg-gradient-red-20 {
+    --tw-gradient-position: to bottom in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+    --tw-gradient-from: #FFECE7;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+    --tw-gradient-to: #F8B3A6;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .button-primary {
     background-color: var(--color-blue);
@@ -1449,7 +1540,7 @@ body {
     }
     padding: 8px 16px;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     line-height: auto;
     color: var(--color-primary);
     text-wrap: nowrap;
@@ -1466,6 +1557,7 @@ body {
     @media screen and (min-width: 1024px) {
       border-radius: 5px;
       padding: 18px 32px;
+      font-size: 18px;
     }
   }
 }

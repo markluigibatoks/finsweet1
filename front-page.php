@@ -1,6 +1,10 @@
+<div class="lg:pt-6 bg-gradient-light-blue-10">
 <?php
     get_header();
     get_template_part("/partials/front-page/banner");
+?>
+</div>
+<?php 
     get_template_part("/partials/front-page/middle1");
     get_template_part("/partials/front-page/main");
     get_template_part("/partials/front-page/bottom1");

@@ -118,7 +118,7 @@ body {
     }
 
     /* Equivalent of: from-[#FFD9D033] to-[#F24C2733] (20% opacity) */
-    .bg-gradient-red-20 {
+    .bg-gradient-light-red-20 {
         @apply bg-gradient-to-b from-[#FFECE7] to-[#F8B3A6];
     }
 

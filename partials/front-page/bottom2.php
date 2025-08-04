@@ -3,7 +3,7 @@
         <div class="w-full text-center lg:text-left">
             <h2 class="lg:text-h2 md:text-h4 text-h5 text-primary">Customer Testimonials</h2>
         </div>
-        <div class="mt-12 grid gap-8 grid-cols-1 lg:grid-cols-3">
+        <div class="mt-10 lg:mt-12 grid gap-8 grid-cols-1 lg:grid-cols-3">
           <div class="rounded-xl p-8 bg-gradient-light-blue-20 w-full">
             <div class="mb-7 flex gap-4 items-center">
               <div class="max-w-max">

@@ -1,73 +1,91 @@
-<footer class="main-box bg-black py-16">
-    <div class="wrapper">
-      <div id="footer-body" class="grid sm:grid-cols-2 lg:flex gap-5 gap-y-10">
-        <div class="text-white">
-          <a id="footer-logo" href="<?php echo site_url('/')?>">
-            <div class="xl:pr-16 pr-6">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="logo" />
-            </div>
-          </a>
+<footer>
+  <div class="relative lg:mt-38 main-box bg-[#EFF0F8] lg:py-0 py-10">
+    <div class="relative wrapper lg:pt-73 lg:pb-20">
+      <div class="lg:absolute -top-38 left-0 lg:px-30 lg:py-25 px-5 py-10 bg-blue lg:flex items-center gap-5 justify-between w-full text-center lg:text-left">
+          <h2 class="text-white lg:max-w-[461px] lg:text-h2 md:text-h4 text-h5">Get started with Finsweet today</h2>
+          <a href="<?php echo site_url('/pricing') ?>" class="button-red block max-w-max mx-auto lg:mx-0 lg:mt-0 mt-10">View Pricing</a>
+      </div>      
+    
+      <div class="lg:mt-0 mt-10 lg:flex gap-5 justify-between">
+        <div class="flex flex-col justify-between pb-7">
+          <div class="flex gap-5">
+            <a href="#" target="_blank" class="hover:opacity-78 w-4 h-4 display flex items-center justify-center">
+              <?php echo inline_svg('/assets/images/facebook.svg'); ?>
+            </a>
 
-          <div id="copyright" class="lg:text-left text-center mt-16 lg:mt-7 uppercase text-cap-2 text-white">
-            &copy; Copyright <a class="hover:underline" href="<?php echo site_url('/') ?>"><?php echo get_bloginfo(); ?></a> <?php echo date('Y')?>
+            <a href="#" target="_blank" class="hover:opacity-78 w-4 h-4 display flex items-center justify-center">
+              <?php echo inline_svg('/assets/images/instagram.svg'); ?>
+            </a>
+
+            <a href="#" target="_blank" class="hover:opacity-78 w-4 h-4 display flex items-center justify-center">
+              <?php echo inline_svg('/assets/images/twitter.svg'); ?>
+            </a>
           </div>
 
-          <div class="text-cap-2 mt-8">
-            <a href="tel:(480) 555-0103" target="_blank" class="block hover:underline max-w-max">(480) 555-0103</a>
-            <address class="not-italic">4517 Washington Ave.</address>
-            <a href="mailto:boilerplate@example.com" target="_blank" class="block hover:underline max-w-max">boilerplate@example.com</a>
-          </div>
+          <address class="lg:mt-0 mt-5 not-italic text-h5 leading-[1.41] -tracking-[0.72]">398 11th St, San Francisco</address>
         </div>
 
-        <div class="flex gap-18 lg:ml-auto">
-          <div class="text-white">
-            <span>Quicklinks</span>
-            <ul class="mt-5 text-cap-2">
-              <li>
-                <a href="#" class="uppercase hover:underline max-w-max opacity-78">About Us</a>
-              </li>
-              <li class="mt-6">
-                <a href="#" class="uppercase hover:underline max-w-max opacity-78">Services</a>
-              </li>
-              <li class="mt-6">
-                <a href="#" class="uppercase hover:underline max-w-max opacity-78">Events</a>
-              </li>
-              <li class="mt-6">
-                <a href="#" class="uppercase hover:underline max-w-max opacity-78">Blog</a>
-              </li>
-            </ul>
-          </div>
+        <div>
+          <div class="lg:max-w-[645px] xl:max-w-[845px] w-full flex flex-col sm:flex-row gap-10 sm:gap-5 justify-between">
+            <div>
+              <span class="text-[22px] font-medium leading-[28px] text-black">Company</span>
+              <ul class="mt-5 sm:mt-12">
+                <li>
+                  <a class="hover:underline <?php echo is_page('product') ? 'current-menu-item' : '' ?>" href="<?php echo site_url('/product'); ?>">Product</a>
+                </li>
+                <li class="mt-6">
+                  <a class="hover:underline <?php echo is_page('pricing') ? 'current-menu-item' : '' ?>" href="<?php echo site_url('/pricing'); ?>">Pricing</a>
+                </li>
+                <li class="mt-6">
+                  <a class="hover:underline <?php echo is_page('about-us') ? 'current-menu-item' : '' ?>" href="<?php echo site_url('/about-us'); ?>">About Us</a>
+                </li>
+              </ul>
+            </div>
 
-          <div class="text-white">
-            <span>Connect</span>
-            <div class="mt-5 flex gap-5">
-              <a href="#" target="_blank" class="hover:opacity-78 w-4 h-4 display flex items-center justify-center">
-                <?php echo inline_svg('/assets/images/facebook.svg'); ?>
-              </a>
+            <div>
+              <span class="text-[22px] font-medium leading-[28px] text-black">Legal</span>
+              <ul class="mt-5 sm:mt-12">
+                <li>
+                  <a class="hover:underline <?php echo is_page('privacy-policy') ? 'current-menu-item' : '' ?>" href="<?php echo site_url('/privacy-policy'); ?>">Privacy Policy</a>
+                </li>
+                <li class="mt-6">
+                  <a class="hover:underline <?php echo is_page('404') ? 'current-menu-item' : '' ?>" href="<?php echo site_url('/404'); ?>">404</a>
+                </li>
+                <li class="mt-6">
+                  <a class="hover:underline <?php echo is_page('protected-page') ? 'current-menu-item' : '' ?>" href="<?php echo site_url('/protected-page'); ?>">Protected Page</a>
+                </li>
+              </ul>
+            </div>
 
-              <a href="#" target="_blank" class="hover:opacity-78 w-4 h-4 display flex items-center justify-center">
-                <?php echo inline_svg('/assets/images/facebook.svg'); ?>
-              </a>
-
-              <a href="#" target="_blank" class="hover:opacity-78 w-4 h-4 display flex items-center justify-center">
-                <?php echo inline_svg('/assets/images/facebook.svg'); ?>
-              </a>
+            <div>
+              <span class="text-[22px] font-medium leading-[28px] text-black">Reach Us</span>
+              <ul class="mt-5 sm:mt-12">
+                <li>
+                  <a class="hover:underline <?php echo is_page('contact') ? 'current-menu-item' : '' ?>" href="<?php echo site_url('/contact'); ?>">Contact Us</a>
+                </li>
+                <li class="mt-6">
+                  <a href="mailto:fs@finsweet.com" target="_blank" class="block hover:underline max-w-max">fs@finsweet.com</a>
+                </li>
+                <li class="mt-6">
+                  <a href="tel:+18080808" target="_blank" class="block hover:underline max-w-max">+1808 08 08</a>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-
-        <div class="col-span-full lg:ml-auto xl:ml-29 text-center lg:text-left">
-            <h2 class="text-h5 md:text-h4 mb-2 lg:mb-8 uppercase text-white">Subscribe to get Latest <span class="lg:block">Updates and News</span></h2>
-
-            <form method="POST" id="newsletter-form">
-              <div class="mx-auto lg:mx-0 flex lg:flex-row flex-col items-center gap-5 max-w-[512px] w-full relative">
-                <input type="email" name="email" placeholder="Yourmail@gmail.com" class="w-full border-white/15 border-1 lg:rounded-tl-xl lg:rounded-bl-xl lg:rounded-tr-[28px] lg:rounded-br-[28px] rounded-lg leading-16 lg:pl-5 lg:pr-55 px-5 text-white/80" />
-                <button type="submit" class="cursor-pointer lg:absolute lg:right-0 button-primary max-w-[201px] w-full">Subscribe</button>
-              </div>
-            </form>
+          <form method="POST" id="newsletter-form" class="mt-20 lg:mt-40 w-full lg:max-w-[645px] xl:max-w-[845px]">
+            <div class="mx-auto lg:mx-0 flex lg:flex-row flex-col items-center gap-5 w-full relative">
+              <input type="email" name="email" placeholder="Enter your email" class="bg-white w-full border-white/15 border-1 rounded-[5px] leading-[89px] lg:pl-5 lg:pr-[357px] px-5" />
+              <button type="submit" class="py-5 px-9 max-w-[325px] cursor-pointer lg:absolute lg:right-3 button-red w-full">Subscribe</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
+  </div>
+
+  <div id="copyright" class="p-5 text-white bg-blue text-center leading-[1.41] -tracking-[0.54]">
+      &copy; Copyright <a class="hover:underline <?php echo is_page('contact') ? 'current-menu-item' : '' ?>" href="<?php echo site_url('/contact'); ?>" href="<?php echo site_url('/') ?>"><?php echo get_bloginfo(); ?></a> <?php echo date('Y')?>
+  </div>
 </footer>
 
 <?php wp_footer(); ?>

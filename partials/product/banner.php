@@ -1,4 +1,4 @@
-<main class="main-box lg:pt-24 lg:pb-30">
+<main class="main-box lg:pt-24 lg:pb-30 py-10">
     <div class="wrapper">
       <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
         <div class="lg:max-w-[631px] w-full text-center lg:text-left">

@@ -14,6 +14,7 @@
 <?php
   get_template_part("/partials/product/section1");
   get_template_part("/partials/product/section2");
+  get_template_part("/partials/product/section3");
   
   get_footer();
 ?>

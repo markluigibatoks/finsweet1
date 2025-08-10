@@ -790,6 +790,9 @@
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
+  }
   .h-full {
     height: 100%;
   }
@@ -801,6 +804,9 @@
   }
   .w-6 {
     width: calc(var(--spacing) * 6);
+  }
+  .w-12 {
+    width: calc(var(--spacing) * 12);
   }
   .w-full {
     width: 100%;
@@ -819,6 +825,9 @@
   }
   .max-w-\[512px\] {
     max-width: 512px;
+  }
+  .max-w-\[690px\] {
+    max-width: 690px;
   }
   .max-w-\[768px\] {
     max-width: 768px;
@@ -888,6 +897,9 @@
   }
   .gap-12 {
     gap: calc(var(--spacing) * 12);
+  }
+  .self-end {
+    align-self: flex-end;
   }
   .overflow-auto {
     overflow: auto;
@@ -1021,6 +1033,12 @@
   .pr-5 {
     padding-right: calc(var(--spacing) * 5);
   }
+  .pr-12 {
+    padding-right: calc(var(--spacing) * 12);
+  }
+  .pr-\[12\] {
+    padding-right: 12;
+  }
   .pb-7 {
     padding-bottom: calc(var(--spacing) * 7);
   }
@@ -1041,6 +1059,12 @@
   }
   .align-top {
     vertical-align: top;
+  }
+  .text-h2 {
+    font-size: var(--text-h2);
+    line-height: var(--tw-leading, var(--text-h2--line-height));
+    letter-spacing: var(--tw-tracking, var(--text-h2--letter-spacing));
+    font-weight: var(--tw-font-weight, var(--text-h2--font-weight));
   }
   .text-h5 {
     font-size: var(--text-h5);
@@ -1246,10 +1270,40 @@
       position: absolute;
     }
   }
+  .before\:-top-16 {
+    &::before {
+      content: var(--tw-content);
+      top: calc(var(--spacing) * -16);
+    }
+  }
   .before\:top-0 {
     &::before {
       content: var(--tw-content);
       top: calc(var(--spacing) * 0);
+    }
+  }
+  .before\:top-16 {
+    &::before {
+      content: var(--tw-content);
+      top: calc(var(--spacing) * 16);
+    }
+  }
+  .before\:-right-0 {
+    &::before {
+      content: var(--tw-content);
+      right: calc(var(--spacing) * -0);
+    }
+  }
+  .before\:-right-5 {
+    &::before {
+      content: var(--tw-content);
+      right: calc(var(--spacing) * -5);
+    }
+  }
+  .before\:-right-12 {
+    &::before {
+      content: var(--tw-content);
+      right: calc(var(--spacing) * -12);
     }
   }
   .before\:-left-4 {
@@ -1324,6 +1378,12 @@
       width: calc(var(--spacing) * 8);
     }
   }
+  .before\:rounded-br-\[10px\] {
+    &::before {
+      content: var(--tw-content);
+      border-bottom-right-radius: 10px;
+    }
+  }
   .before\:rounded-bl {
     &::before {
       content: var(--tw-content);
@@ -1346,6 +1406,12 @@
     &::before {
       content: var(--tw-content);
       border-bottom-left-radius: var(--radius-sm);
+    }
+  }
+  .before\:bg-blue {
+    &::before {
+      content: var(--tw-content);
+      background-color: var(--color-blue);
     }
   }
   .before\:bg-red {
@@ -1736,6 +1802,11 @@
       max-width: 589px;
     }
   }
+  .lg\:max-w-\[631px\] {
+    @media (width >= 64rem) {
+      max-width: 631px;
+    }
+  }
   .lg\:max-w-\[645px\] {
     @media (width >= 64rem) {
       max-width: 645px;
@@ -1784,6 +1855,11 @@
   .lg\:gap-10 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 10);
+    }
+  }
+  .lg\:gap-12 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 12);
     }
   }
   .lg\:gap-17 {
@@ -1866,6 +1942,11 @@
       padding-bottom: calc(var(--spacing) * 28);
     }
   }
+  .lg\:pb-30 {
+    @media (width >= 64rem) {
+      padding-bottom: calc(var(--spacing) * 30);
+    }
+  }
   .lg\:pb-32 {
     @media (width >= 64rem) {
       padding-bottom: calc(var(--spacing) * 32);
@@ -1879,6 +1960,14 @@
   .lg\:text-left {
     @media (width >= 64rem) {
       text-align: left;
+    }
+  }
+  .lg\:text-h1 {
+    @media (width >= 64rem) {
+      font-size: var(--text-h1);
+      line-height: var(--tw-leading, var(--text-h1--line-height));
+      letter-spacing: var(--tw-tracking, var(--text-h1--letter-spacing));
+      font-weight: var(--tw-font-weight, var(--text-h1--font-weight));
     }
   }
   .lg\:text-h2 {
@@ -1971,6 +2060,22 @@
       content: var(--tw-content);
       @media (width >= 80rem) {
         width: calc(var(--spacing) * 8);
+      }
+    }
+  }
+  .before\:2xl\:-right-12 {
+    &::before {
+      content: var(--tw-content);
+      @media (width >= 96rem) {
+        right: calc(var(--spacing) * -12);
+      }
+    }
+  }
+  .before\:2xl\:-right-13 {
+    &::before {
+      content: var(--tw-content);
+      @media (width >= 96rem) {
+        right: calc(var(--spacing) * -13);
       }
     }
   }

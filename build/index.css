@@ -851,6 +851,12 @@
   .resize {
     resize: both;
   }
+  .list-inside {
+    list-style-position: inside;
+  }
+  .list-disc {
+    list-style-type: disc;
+  }
   .list-none {
     list-style-type: none;
   }
@@ -1124,6 +1130,10 @@
   .leading-\[89px\] {
     --tw-leading: 89px;
     line-height: 89px;
+  }
+  .leading-\[auto\] {
+    --tw-leading: auto;
+    line-height: auto;
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);

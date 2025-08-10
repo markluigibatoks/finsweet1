@@ -24,7 +24,7 @@
         <div class="my-10 lg:my-32 xl:pl-27 flex flex-col lg:flex-row gap-5 lg:gap-17 items-center">
             <div class="lg:order-2 bg-gradient-light-red-20 p-5 w-full md:max-w-[731px] md:min-h-[523px] flex items-center justify-center rounded-[31px] md:rounded-bl-none">
                 <div class="max-w-max mx-auto">
-                    <img class="object-cover w-full" src="<?php echo get_template_directory_uri();?>/assets/images/front-page/bottom1-img1.jpg" alt="a bar graph"/>
+                    <img class="object-cover w-full" src="<?php echo get_template_directory_uri();?>/assets/images/front-page/bottom1-img2.jpg" alt="a list of users"/>
                 </div>
             </div>
     
@@ -45,7 +45,7 @@
         <div class="flex flex-col md:flex-row gap-5 lg:gap-20 items-center">
             <div class="bg-gradient-light-blue-20 p-5 w-full md:max-w-[731px] md:min-h-[523px] flex items-center justify-center rounded-[31px] md:rounded-br-none">
                 <div class="max-w-max mx-auto">
-                    <img class="object-cover w-full" src="<?php echo get_template_directory_uri();?>/assets/images/front-page/bottom1-img1.jpg" alt="a bar graph"/>
+                    <img class="object-cover w-full" src="<?php echo get_template_directory_uri();?>/assets/images/front-page/bottom1-img3.png" alt="a list of updates"/>
                 </div>
             </div>
 

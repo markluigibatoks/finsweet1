@@ -1804,6 +1804,11 @@
       flex-direction: row;
     }
   }
+  .lg\:place-items-start {
+    @media (width >= 64rem) {
+      place-items: start;
+    }
+  }
   .lg\:items-center {
     @media (width >= 64rem) {
       align-items: center;

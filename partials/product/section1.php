@@ -4,7 +4,7 @@
             <h2 class="lg:text-h2 md:text-h4 text-h5 text-primary">Get the best out of your customer support with Finsweet</h2>
         </div>
 
-        <div class="lg:mt-20 mt-10 grid grid-cols-1 place-items-center md:place-items-start sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="lg:mt-20 mt-10 grid grid-cols-1 place-items-center lg:place-items-start sm:grid-cols-2 lg:grid-cols-3 gap-10">
           <div class="max-w-[373px] w-full text-center lg:text-left">
             <div class="lg:mx-0 mx-auto bg-gradient-light-blue-15 w-25 h-25 flex items-center justify-center rounded-xl">
               <?php echo file_get_contents(get_template_directory() . '/assets/images/product/section1-icon1.svg'); ?>

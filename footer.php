@@ -1,7 +1,7 @@
 <footer>
   <div class="relative lg:mt-38 main-box bg-[#EFF0F8] lg:py-0 py-10">
     <div class="relative wrapper lg:pt-73 lg:pb-20">
-      <div class="lg:absolute -top-38 left-0 lg:px-30 lg:py-25 px-5 py-10 bg-blue lg:flex items-center gap-5 justify-between w-full text-center lg:text-left">
+      <div class="rounded-tr-[10px] rounded-bl-[10px] lg:absolute -top-38 left-0 lg:px-30 lg:py-25 px-5 py-10 bg-blue lg:flex items-center gap-5 justify-between w-full text-center lg:text-left before:w-4 before:h-4 before:2xl:w-8 before:2xl:h-8 before:bg-red before:absolute before:top-0 before:2xl:-left-13 before:-left-5 before:rounded-bl before:2xl:rounded-bl-[10px] after:w-4 after:h-4 after:2xl:w-8 after:2xl:h-8 after:bg-blue after:absolute after:bottom-0 after:2xl:-right-13 after:-right-5 after:rounded-br after:2xl:rounded-br-[10px]">
           <h2 class="text-white lg:max-w-[461px] lg:text-h2 md:text-h4 text-h5">Get started with Finsweet today</h2>
           <a href="<?php echo site_url('/pricing') ?>" class="button-red block max-w-max mx-auto lg:mx-0 lg:mt-0 mt-10">View Pricing</a>
       </div>      

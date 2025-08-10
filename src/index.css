@@ -102,6 +102,11 @@ body {
         @apply bg-gradient-to-b from-[#F5F5FC] to-[#E5E6FF];
     }
 
+    /* Equivalent of: from-[#232ED133] to-[#232ED1] (15% opacity start) */
+    .bg-gradient-light-blue-15 {
+        @apply bg-gradient-to-b from-[#D3D5F626] to-[#232ED126];
+    }
+
     /* Equivalent of: from-[#9499DD33] to-[#0010FF33] (20% opacity) */
     .bg-gradient-light-blue-20 {
         @apply bg-gradient-to-b from-[#EBECF9] to-[#CCCCFF];

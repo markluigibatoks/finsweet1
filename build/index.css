@@ -240,6 +240,9 @@
   .sticky {
     position: sticky;
   }
+  .inset-0 {
+    inset: calc(var(--spacing) * 0);
+  }
   .-top-1 {
     top: calc(var(--spacing) * -1);
   }
@@ -1581,6 +1584,11 @@
   .lg\:absolute {
     @media (width >= 64rem) {
       position: absolute;
+    }
+  }
+  .lg\:-top-38 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * -38);
     }
   }
   .lg\:top-0 {

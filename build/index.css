@@ -286,6 +286,9 @@
   .z-10 {
     z-index: 10;
   }
+  .z-50 {
+    z-index: 50;
+  }
   .col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -1000,6 +1003,9 @@
   }
   .bg-\[\#EFF0F8\] {
     background-color: #EFF0F8;
+  }
+  .bg-black {
+    background-color: var(--color-black);
   }
   .bg-blue {
     background-color: var(--color-blue);

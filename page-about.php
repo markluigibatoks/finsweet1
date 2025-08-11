@@ -2,21 +2,24 @@
 /*  Template Name: About Page
     Template Post Type: page
 */
-  get_header();
 
-  get_template_part(
-    '/partials/page-banner',
-    null,
-    array(
-      'image' => array(
-        'src' => get_template_directory_uri() . "/assets/images/about-us/placeholder.svg",
-        'alt' => "a place full of trees"
-      ),
-      'heading' => "Serving the world around us"
-    )
-  );
+get_header();
+?>
 
+<div class="lg:pt-6 xl:px-14 bg-gradient-light-blue-10">
+<?php
+    get_template_part("/partials/header");
+    get_template_part("/partials/about-us/banner");
+?>
+</div>
+
+<div class="lg:flex flex-col lg:gap-33 lg:pb-32 lg:pt-31 pb-10">
+<?php
   get_template_part("/partials/about-us/section1");
-  
+  get_template_part("/partials/about-us/section2");
+?>
+</div>
+
+<?php
   get_footer();
 ?>

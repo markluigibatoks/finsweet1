@@ -5,7 +5,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur dipiscing elit. Vestibulum vitae nunc vitae neque .</p>
         </div>
 
-        <div class="hidden absolute -bottom-51 right-5 xl:right-29 sm:flex items-center justify-center">
+        <div class="absolute -top-5 sm:top-[inherit] sm:-bottom-51 right-5 w-10 h-10 sm:h-[278px] sm:w-full max-w-max xl:right-29 flex items-center justify-center">
             <?php echo file_get_contents(get_template_directory() . '/assets/images/about-us/banner.svg'); ?>
         </div>
     </div>

@@ -6,7 +6,7 @@
 get_header();
 ?>
 
-<div class="lg:pt-6 xl:pr-14 bg-gradient-light-blue-10">
+<div class="lg:pt-6 xl:px-14 bg-gradient-light-blue-10">
 <?php
     get_template_part("/partials/header");
     get_template_part("/partials/product/banner");

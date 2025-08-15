@@ -1923,6 +1923,11 @@
       margin-top: calc(var(--spacing) * 20);
     }
   }
+  .lg\:mt-35 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 35);
+    }
+  }
   .lg\:mt-38 {
     @media (width >= 64rem) {
       margin-top: calc(var(--spacing) * 38);

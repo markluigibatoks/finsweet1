@@ -84,7 +84,7 @@
   </div>
 
   <div id="copyright" class="p-5 text-white bg-blue text-center leading-[1.41] -tracking-[0.54]">
-      &copy; Copyright <a class="hover:underline <?php echo is_front_page() ? 'current-menu-item' : '' ?>" href="<?php echo site_url('/'); ?>" href="<?php echo site_url('/') ?>"><?php echo get_bloginfo(); ?></a> <?php echo date('Y')?>
+      &copy; Copyright <a class="hover:underline" href="<?php echo site_url('/') ?>"><?php echo get_bloginfo(); ?></a> <?php echo date('Y')?>
   </div>
 </footer>
 

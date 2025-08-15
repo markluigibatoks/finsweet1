@@ -1,43 +1,109 @@
-<div class="main-box lg:py-32 py-10">
+<?php
+  $recent_blog = new WP_Query([
+    'post_type' => 'post',
+    'posts_per_page' => 1,
+    'post_status' => 'publish'
+  ]);
+
+  wp_reset_postdata();
+?>
+
+<div class="main-box bg-white lg:pb-32 pb-10">
     <div class="wrapper">
-        <div class="w-full text-center">
-          <h2 class="lg:text-h2 md:text-h4 text-h5 uppercase">All Blog Posts</h2>
-
-          <div class="lg:mt-16 mt-5 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-            <?php
-              $flag = true;
-              while(have_posts()) {
-                the_post();
-            ?>
-            
-            <div class="<?php echo $flag ? 'px-8 pt-12 pb-8 border-primary border-b-16' : 'px-8 py-12'; ?> bg-white w-full text-center lg:text-left">
-              <span class="text-cap-3 text-gradient uppercase">Relationship</span>
-              <a href="<?php the_permalink(); ?>" class="hover:opacity-70">
-                <h2 class="mt-4 text-h5 mb-4 uppercase"><?php the_title(); ?></h2>
-              </a>
-              <p class="opacity-78"><?php echo wp_trim_words(get_the_excerpt(), 12); ?></p>
-
-              <span class="mt-12 block text-label-3">By <?php the_author(); ?></span>
-              <span><?php echo get_the_date('l j F, Y'); ?></span>
-            </div>
-
-            <?php
-              $flag = false;
-              wp_reset_postdata();
-              }
-            ?>
-          </div>
+        <div class="w-full">
+            <h2 class="lg:text-h2 md:text-h4 text-h5 text-primary">All Posts</h2>
         </div>
 
-        <div class="pagination">
-        <?php
-          echo paginate_links(array(
-              'mid_size'  => 2,
-              'prev_text' => __('« Previous'),
-              'next_text' => __('Next »'),
-              'type' => 'list'
-          ));
-          ?>
-      </div>
+        <div class="lg:mt-20 mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20">
+          <div class="w-full">
+            <div class="max-w-max">
+              <img class="rounded-[10px] object-cover w-full" src="<?php echo get_template_directory_uri();?>/assets/images/home/section2-img1.jpg" alt="a computer"/>
+            </div>
+            <h2 class="mt-10 lg:mb-6 mb-5 text-h5 text-primary">Top 8 Traits of high-growth websites.</h2>
+            <p>Phasellus scelerisque eros felis, ut lobortis ipsum mattis ullamcorper. Morbi magna orci, ornare vel auctor non, malesuada sed dolor. </p>
+            <a href="<?php echo site_url('/blog')?>" class="flex gap-3 mt-8 button-primary text-[#1A1A1A] hover:underline max-w-max">
+                    Learn More
+
+                    <div class="flex items-center justify-center">
+                        <?php echo file_get_contents(get_template_directory() . '/assets/images/arrow.svg'); ?>
+                    </div>
+                </a>
+          </div>
+
+          <div class="w-full">
+            <div class="max-w-max">
+              <img class="rounded-[10px] object-cover w-full" src="<?php echo get_template_directory_uri();?>/assets/images/home/section2-img2.jpg" alt="a computer"/>
+            </div>
+            <h2 class="mt-10 lg:mb-6 mb-5 text-h5 text-primary">Top 8 Traits of high-growth websites.</h2>
+            <p>Phasellus scelerisque eros felis, ut lobortis ipsum mattis ullamcorper. Morbi magna orci, ornare vel auctor non, malesuada sed dolor. </p>
+            <a href="<?php echo site_url('/blog')?>" class="flex gap-3 mt-8 button-primary text-[#1A1A1A] hover:underline max-w-max">
+                    Learn More
+
+                    <div class="flex items-center justify-center">
+                        <?php echo file_get_contents(get_template_directory() . '/assets/images/arrow.svg'); ?>
+                    </div>
+                </a>
+          </div>
+
+          <div class="w-full">
+            <div class="max-w-max">
+              <img class="rounded-[10px] object-cover w-full" src="<?php echo get_template_directory_uri();?>/assets/images/home/section2-img3.jpg" alt="a computer"/>
+            </div>
+            <h2 class="mt-10 lg:mb-6 mb-5 text-h5 text-primary">Top 8 Traits of high-growth websites.</h2>
+            <p>Phasellus scelerisque eros felis, ut lobortis ipsum mattis ullamcorper. Morbi magna orci, ornare vel auctor non, malesuada sed dolor. </p>
+            <a href="<?php echo site_url('/blog')?>" class="flex gap-3 mt-8 button-primary text-[#1A1A1A] hover:underline max-w-max">
+                    Learn More
+
+                    <div class="flex items-center justify-center">
+                        <?php echo file_get_contents(get_template_directory() . '/assets/images/arrow.svg'); ?>
+                    </div>
+                </a>
+          </div>
+
+          <div class="w-full">
+            <div class="max-w-max">
+              <img class="rounded-[10px] object-cover w-full" src="<?php echo get_template_directory_uri();?>/assets/images/home/section2-img4.jpg" alt="a computer"/>
+            </div>
+            <h2 class="mt-10 lg:mb-6 mb-5 text-h5 text-primary">Top 8 Traits of high-growth websites.</h2>
+            <p>Phasellus scelerisque eros felis, ut lobortis ipsum mattis ullamcorper. Morbi magna orci, ornare vel auctor non, malesuada sed dolor. </p>
+            <a href="<?php echo site_url('/blog')?>" class="flex gap-3 mt-8 button-primary text-[#1A1A1A] hover:underline max-w-max">
+                    Learn More
+
+                    <div class="flex items-center justify-center">
+                        <?php echo file_get_contents(get_template_directory() . '/assets/images/arrow.svg'); ?>
+                    </div>
+                </a>
+          </div>
+
+          <div class="w-full">
+            <div class="max-w-max">
+              <img class="rounded-[10px] object-cover w-full" src="<?php echo get_template_directory_uri();?>/assets/images/home/section2-img5.jpg" alt="a computer"/>
+            </div>
+            <h2 class="mt-10 lg:mb-6 mb-5 text-h5 text-primary">Top 8 Traits of high-growth websites.</h2>
+            <p>Phasellus scelerisque eros felis, ut lobortis ipsum mattis ullamcorper. Morbi magna orci, ornare vel auctor non, malesuada sed dolor. </p>
+            <a href="<?php echo site_url('/blog')?>" class="flex gap-3 mt-8 button-primary text-[#1A1A1A] hover:underline max-w-max">
+                    Learn More
+
+                    <div class="flex items-center justify-center">
+                        <?php echo file_get_contents(get_template_directory() . '/assets/images/arrow.svg'); ?>
+                    </div>
+                </a>
+          </div>
+
+          <div class="w-full">
+            <div class="max-w-max">
+              <img class="rounded-[10px] object-cover w-full" src="<?php echo get_template_directory_uri();?>/assets/images/home/section2-img6.jpg" alt="a computer"/>
+            </div>
+            <h2 class="mt-10 lg:mb-6 mb-5 text-h5 text-primary">Top 8 Traits of high-growth websites.</h2>
+            <p>Phasellus scelerisque eros felis, ut lobortis ipsum mattis ullamcorper. Morbi magna orci, ornare vel auctor non, malesuada sed dolor. </p>
+            <a href="<?php echo site_url('/blog')?>" class="flex gap-3 mt-8 button-primary text-[#1A1A1A] hover:underline max-w-max">
+                    Learn More
+
+                    <div class="flex items-center justify-center">
+                        <?php echo file_get_contents(get_template_directory() . '/assets/images/arrow.svg'); ?>
+                    </div>
+                </a>
+          </div>
+        </div>
     </div>
 </div>

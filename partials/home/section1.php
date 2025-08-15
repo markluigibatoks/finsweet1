@@ -8,13 +8,13 @@
   wp_reset_postdata();
 ?>
 
-<div class="main-box bg-white lg:py-32">
+<div class="main-box bg-white lg:py-32 py-10">
     <div class="wrapper">
         <div class="w-full">
             <h2 class="lg:text-h2 md:text-h4 text-h5 text-primary">Featured Posts</h2>
         </div>
 
-        <div class="lg:mt-20 mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="lg:mt-20 mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20">
           <div class="w-full">
             <div class="max-w-max">
               <img class="rounded-[10px] object-cover w-full" src="<?php echo get_template_directory_uri();?>/assets/images/home/section1-img1.jpg" alt="a computer"/>

@@ -5,7 +5,17 @@
     'post_status' => 'publish'
   ]);
 
-  wp_reset_postdata();
+  $link = '#';
+
+  if($recent_blog->have_posts()) {
+    
+    while($recent_blog->have_posts()) {
+      $recent_blog->the_post();
+
+      $link = get_the_permalink();
+      wp_reset_postdata();
+    }
+  } 
 ?>
 
 <div class="main-box bg-white lg:py-32 py-10">
@@ -21,7 +31,7 @@
             </div>
             <h2 class="mt-10 lg:mb-6 mb-5 text-h5 text-primary">Top 8 Traits of high-growth websites.</h2>
             <p>Phasellus scelerisque eros felis, ut lobortis ipsum mattis ullamcorper. Morbi magna orci, ornare vel auctor non, malesuada sed dolor. </p>
-            <a href="<?php echo site_url('/blog')?>" class="flex gap-3 mt-8 button-primary text-[#1A1A1A] hover:underline max-w-max">
+            <a href="<?php echo $link;?>" class="flex gap-3 mt-8 button-primary text-[#1A1A1A] hover:underline max-w-max">
                     Learn More
 
                     <div class="flex items-center justify-center">
@@ -36,7 +46,7 @@
             </div>
             <h2 class="mt-10 lg:mb-6 mb-5 text-h5 text-primary">Top 8 Traits of high-growth websites.</h2>
             <p>Phasellus scelerisque eros felis, ut lobortis ipsum mattis ullamcorper. Morbi magna orci, ornare vel auctor non, malesuada sed dolor. </p>
-            <a href="<?php echo site_url('/blog')?>" class="flex gap-3 mt-8 button-primary text-[#1A1A1A] hover:underline max-w-max">
+            <a href="<?php echo $link;?>" class="flex gap-3 mt-8 button-primary text-[#1A1A1A] hover:underline max-w-max">
                     Learn More
 
                     <div class="flex items-center justify-center">
@@ -51,7 +61,7 @@
             </div>
             <h2 class="mt-10 lg:mb-6 mb-5 text-h5 text-primary">Top 8 Traits of high-growth websites.</h2>
             <p>Phasellus scelerisque eros felis, ut lobortis ipsum mattis ullamcorper. Morbi magna orci, ornare vel auctor non, malesuada sed dolor. </p>
-            <a href="<?php echo site_url('/blog')?>" class="flex gap-3 mt-8 button-primary text-[#1A1A1A] hover:underline max-w-max">
+            <a href="<?php echo $link;?>" class="flex gap-3 mt-8 button-primary text-[#1A1A1A] hover:underline max-w-max">
                     Learn More
 
                     <div class="flex items-center justify-center">

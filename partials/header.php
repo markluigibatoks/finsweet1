@@ -31,7 +31,7 @@
             </ul>
         </nav>
 
-        <button type="button" class="ml-auto button-nav-link">Clone Project</button>
+        <a href="https://github.com/markluigibatoks/finsweet1" target="_blank" class="ml-auto button-nav-link">Clone Project</a>
         <?php get_template_part('/partials/drawer-toggle') ?>
       </div>
     </div>

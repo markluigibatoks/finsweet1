@@ -1,7 +1,9 @@
+<div class="lg:pt-6 xl:px-14">
 <?php 
   get_header();
   get_template_part("/partials/header");
 ?>
+</div>
 
 <main class="lg:py-35 py-10 main-box">
   <div class="prose max-[934px] mx-auto">
